@@ -1,0 +1,30 @@
+<h2>QR Dashboard</h2>
+
+<a href="/create">Create QR</a>
+
+<table border="1">
+<tr>
+<th>ID</th>
+<th>Code</th>
+<th>Target URL</th>
+<th>Scans</th>
+<th>QR</th>
+</tr>
+
+{% for qr in qr_codes %}
+
+<tr>
+<td>{{qr[0]}}</td>
+<td>{{qr[1]}}</td>
+<td>{{qr[2]}}</td>
+<td>{{qr[3]}}</td>
+
+<td>
+<img src="/static/qr/{{qr[1]}}.png" width="100">
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
